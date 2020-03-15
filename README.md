@@ -1,4 +1,8 @@
-# Chinithm_controller
+# Touchpanel_controller
+
+## 目標
+例の音ゲーっぽいコントローラーを作る
+
 ## 使うもの
 - Pro micro
 - 銅テープ
