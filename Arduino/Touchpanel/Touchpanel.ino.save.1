@@ -41,24 +41,15 @@ void loop() {
 
   int f[4] = [0,0,0,0];
   f[0] += (t - f[0]) / 2;
-  f[1] += (t - f[1]) / 2;
-  f[2] += (t - f[2]) / 2;
-  f[3] += (t - f[3]) / 2;
+  f[0] += (t - f[0]) / 2;
+  f[0] += (t - f[0]) / 2;
+  f[0] += (t - f[0]) / 2;
 
-  if (f[0] > l ) {
+  if (f > l ) {
     digitalWrite(4, HIGH);
     Keyboard.press(0x50);
     //delay(5);
-  } else if (f[1] > l) {
-    digitalWrite(6, HIGH);
-    Keyboard.press(0x51);
-  }else if(f[2] > l){
-    digitalWrite(8, HIGH);
-    Keyboard.press(0x52);
-  else if (f[3] > l){
-    digitalWrite(10, HIGH);
-    Keyboard.press(0x53);
-  }else{
+  } else {
     Keyboard.releaseAll();
     digitalWrite(4, LOW);
   }
