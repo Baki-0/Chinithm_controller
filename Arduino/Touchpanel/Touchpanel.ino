@@ -41,10 +41,11 @@ void loop() {
   delay (1);
 
   //フィルター
-  f[0] += (t - f[0]) / 2;
-  f[1] += (t - f[1]) / 2;
-  f[2] += (t - f[2]) / 2;
-  f[3] += (t - f[3]) / 2;
+  f[0] += (t[0] - f[0]) / 2;
+  f[1] += (t[1] - f[1]) / 2;
+  f[2] += (t[2] - f[2]) / 2;
+  f[3] += (t[3] - f[3]) / 2;
+
 
   if (f[0] > l ) {
     digitalWrite(4, HIGH);
@@ -66,7 +67,7 @@ void loop() {
   if(f[2] > l){
     digitalWrite(8, HIGH);
     Keyboard.press(0x52);
-  else{
+  }else{
     Keyboard.releaseAll();
     digitalWrite(8, LOW);
   }
