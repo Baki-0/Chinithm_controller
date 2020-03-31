@@ -25,13 +25,31 @@ void loop() {
     t[0]++; //立ち上がり時間の計測
   }
   
+  //放電
+  digitalWrite(2, LOW);
+  delay (1);
+
+  digitalWrite(2, HIGH);  //パルス
+
   while (digitalRead(5) != HIGH){
     t[1]++; //立ち上がり時間の計測
   }
 
+  //放電
+  digitalWrite(2, LOW);
+  delay (1);
+
+  digitalWrite(2, HIGH);  //パルス
+
   while (digitalRead(7) != HIGH){
     t[2]++; //立ち上がり時間の計測
   }
+  
+  //放電
+  digitalWrite(2, LOW);
+  delay (1);
+
+  digitalWrite(2, HIGH);  //パルス
 
   while (digitalRead(9) != HIGH){
     t[3]++; //立ち上がり時間の計測
