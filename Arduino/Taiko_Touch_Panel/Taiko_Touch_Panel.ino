@@ -18,7 +18,7 @@ void loop() {
   int f[4] = {0,0,0,0};
   int l = 5;
 
-  digitalWrite(2, HIGH);  //パルス
+  digitalWrite(2, HIGH);  //パルス出力
 
   while (digitalRead(3) != HIGH){
     t[0]++; //立ち上がり時間の計測
@@ -28,7 +28,7 @@ void loop() {
   digitalWrite(2, LOW);
   delay (1);
 
-  digitalWrite(4, HIGH);  //パルス
+  digitalWrite(4, HIGH);  //パルス出力
 
   while (digitalRead(5) != HIGH){
     t[1]++; //立ち上がり時間の計測
@@ -38,7 +38,7 @@ void loop() {
   digitalWrite(4, LOW);
   delay (1);
 
-  digitalWrite(6, HIGH);  //パルス
+  digitalWrite(6, HIGH);  //パルス出力
 
   while (digitalRead(7) != HIGH){
     t[2]++; //立ち上がり時間の計測
@@ -48,7 +48,7 @@ void loop() {
   digitalWrite(6, LOW);
   delay (1);
 
-  digitalWrite(8, HIGH);  //パルス
+  digitalWrite(8, HIGH);  //パルス出力
 
   while (digitalRead(9) != HIGH){
     t[3]++; //立ち上がり時間の計測
@@ -65,27 +65,34 @@ void loop() {
 
 
   if (f[0] > l ) {
-    Keyboard.press(0x46);
-    //delay(5);
-  } else{
+    Keyboard.press('d');
+    delay(100);
     Keyboard.releaseAll();
-  }
+  } //else{
+    //Keyboard.releaseAll();
+ // }
    
   if (f[1] > l) {
-    Keyboard.press(0x4A);
-  }else{
+    Keyboard.press('f');
+    delay(100);
     Keyboard.releaseAll();
-  }
+  } //else{
+    //Keyboard.releaseAll();
+ // }
   
   if(f[2] > l){
-    Keyboard.press(0x44);
-  }else{
+    Keyboard.press('j');
+    delay(100);
     Keyboard.releaseAll();
-  }
+  } //else{
+    //Keyboard.releaseAll();
+ // }
    
   if (f[3] > l){
-    Keyboard.press(0x4B);
-  }else{
+    Keyboard.press('k');
+    delay(100);
     Keyboard.releaseAll();
-  }
+  } //else{
+    //Keyboard.releaseAll();
+ // }
 }
